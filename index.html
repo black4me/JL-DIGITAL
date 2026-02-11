@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JL DIGITAL | Elite Digital Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              // Dynamic Theme Colors mapped to CSS Variables
+              gold: {
+                100: 'var(--color-primary-100)',
+                200: 'var(--color-primary-200)',
+                300: 'var(--color-primary-300)',
+                400: 'var(--color-primary-400)',
+                500: 'var(--color-primary-500)', // Main Brand Color
+                600: 'var(--color-primary-600)',
+                700: 'var(--color-primary-700)',
+                800: 'var(--color-primary-800)',
+                900: 'var(--color-primary-900)',
+              },
+              black: {
+                950: '#050505', // Deep Void (Main BG)
+                900: '#0B0C10', // Rich Dark (Secondary BG)
+                800: '#14161A', // Panel BG
+                700: '#1F2229', // Borders
+              },
+              pearl: '#E0E0E0',
+              silver: '#A0A0A0',
+            },
+            fontFamily: {
+              sans: ['Tajawal', 'sans-serif'],
+            },
+            backgroundImage: {
+              'premium-gradient': 'linear-gradient(135deg, #0B0C10 0%, #14161A 100%)',
+              'gold-gradient': 'linear-gradient(135deg, var(--color-primary-400) 0%, var(--color-primary-600) 100%)',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+              'slide-up': 'slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'scroll': 'scroll 30s linear infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(30px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Default Green Theme (Emerald 500 base) */
+        --color-primary-100: #D1FAE5;
+        --color-primary-200: #A7F3D0;
+        --color-primary-300: #6EE7B7;
+        --color-primary-400: #34D399;
+        --color-primary-500: #00C853; /* Main */
+        --color-primary-600: #059669;
+        --color-primary-700: #047857;
+        --color-primary-800: #065F46;
+        --color-primary-900: #064E3B;
+      }
+
+      body {
+        background-color: #050505;
+        color: #E0E0E0;
+        font-family: 'Tajawal', sans-serif;
+        position: relative;
+      }
+      
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        z-index: 9999;
+        opacity: 0.5;
+      }
+
+      .glass-panel {
+        background: rgba(20, 22, 26, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      .glass-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.0) 100%);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-primary-500); 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
